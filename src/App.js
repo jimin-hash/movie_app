@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PropTypes from "prop-types";
+
+function Pencil({ name }) {
+  return (
+    <div>
+      <h1> jimin {name} </h1>
+    </div>
+  );
+}
+
+const jrray = ["a", "b", "c", "d", "e"];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {jrray.map(d => (
+        <Pencil name={d} />
+      ))}
     </div>
   );
 }
